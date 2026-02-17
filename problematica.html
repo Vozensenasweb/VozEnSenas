@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+    <nav>
+        <div class="container nav-content">
+            <a href="#" onclick="showPage('home')" class="logo">
+                <span class="material-symbols-outlined" style="font-size: 2rem;">sign_language</span>
+                <span>LSM Aprendizaje</span>
+            </a>
+            <div class="nav-links">
+               <a href="index.html" id="link-home">Inicio</a>
+                <a href="problematica.html" id="link-problematica">Problemática</a>
+                <a href="dificultades.html" id="link-dificultades">Dificultades</a>
+                <a href="mas info.html" id="link-mas-informacion">Más Información</a>
+            </div>
+            <div class="md-hidden" style="display: none;">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+            <!-- Simple Dark Mode Toggle -->
+            <button onclick="toggleDarkMode()" style="background: none; border: none; cursor: pointer;">
+                <span class="material-symbols-outlined" id="dark-mode-icon">dark_mode</span>
+            </button>
+        </div>
+    </nav>
+
+     <div>
+        <section style="padding-top: 8rem;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 4rem; align-items: center;">
+                    <div>
+                        <span style="color: var(--primary); font-weight: bold; text-transform: uppercase; font-size: 0.75rem;">Análisis de Realidad</span>
+                        <h1 style="font-size: 3.5rem; font-weight: 900; margin: 1rem 0;">La Problemática del LSM en México</h1>
+                        <p style="font-size: 1.25rem;">A pesar de que la Lengua de Señas Mexicana (LSM) es oficialmente reconocida, la comunidad sorda enfrenta una exclusión sistemática.</p>
+                    </div>
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4_00LcAUf-bpdYcbL6UriSE_-x7qjS6mt9qFsqvurPZkMuKC4eaF4jD8T8GwOSRbyyKH_SLwbuIbzOpnkr5lxw_yEGINH3EyyBRF74E0PcZQyq0HmlJb43eWDrxt7FywWiS9nFbXCnnrY9Nc_4yHLxCmXkoyXEvhLHeXdfgaFSo5nU-jhj9WS3eZk2jsgdk-ApGZ-GdepZOagczFteaIp4FjNt7gNbsGxgPmA-CPZRp21emtLX4ddeXooon0rLsmtrwf9Lj9siAOW" style="width: 100%; border-radius: 1.5rem; box-shadow: 0 20px 50px rgba(0,0,0,0.1);" alt="Problematica">
+                </div>
+            </div>
+        </section>
+        <section style="background: rgba(236, 91, 19, 0.05);">
+            <div class="container">
+                <div class="section-header"><h2>Cifras que Impactan</h2></div>
+                <div class="grid-3">
+                    <div class="feature-card" style="text-align: center;">
+                        <span style="font-size: 3rem; font-weight: 900; color: var(--primary);">2.3M</span>
+                        <p>Población con discapacidad auditiva en México.</p>
+                    </div>
+                    <div class="feature-card" style="text-align: center;">
+                        <span style="font-size: 3rem; font-weight: 900; color: var(--primary);">&lt; 1%</span>
+                        <p>Existe una carencia crítica de intérpretes certificados.</p>
+                    </div>
+                    <div class="feature-card" style="text-align: center;">
+                        <span style="font-size: 3rem; font-weight: 900; color: var(--primary);">90%</span>
+                        <p>Información pública carece de adaptaciones visuales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+     <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 1.5rem;">
+                        <span class="material-symbols-outlined">sign_language</span>
+                        <span>LSM Aprendizaje</span>
+                    </a>
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">Dedicados a cerrar la brecha de comunicación en México a través de la educación digital accesible y la difusión cultural.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Plataforma</h4>
+                    <ul>
+                        <li><a href="#" onclick="showPage('mas-informacion')">Más información</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Compañía</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="facebook.com" style="width: 2.5rem; height: 2.5rem; background: rgba(236,91,19,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                           <i class="bi bi-facebook"></i>
+                           <img src="/Imagenes/FACE.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top: 1px solid var(--slate-100); padding-top: 2rem; display: flex; justify-content: space-between; font-size: 0.75rem; color: #94a3b8;">
+                <p>© 2024 LSM Aprendizaje Interactivo. Todos los derechos reservados.</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="#">Términos</a>
+                    <a href="#">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <script src="javascript.js"></script>
+
+</body>
+</html>

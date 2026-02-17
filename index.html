@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>LSM Aprendizaje Interactivo - Prototipo</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <a href="#" onclick="showPage('home')" class="logo">
+                <span class="material-symbols-outlined" style="font-size: 2rem;">sign_language</span>
+                <span>LSM Aprendizaje</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" id="link-home">Inicio</a>
+                <a href="problematica.html" id="link-problematica">Problemática</a>
+                <a href="dificultades.html" id="link-dificultades">Dificultades</a>
+                <a href="mas info.html" id="link-mas-informacion">Más Información</a>
+            </div>
+            <div class="md-hidden" style="display: none;">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+            <!-- Simple Dark Mode Toggle -->
+            <button onclick="toggleDarkMode()" style="background: none; border: none; cursor: pointer;">
+                <span class="material-symbols-outlined" id="dark-mode-icon">dark_mode</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <header class="hero">
+            <div class="hero-bg">
+                <div class="hero-overlay"></div>
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd8TPNR1y7vIA6lTrN7xyFrnfuwyRVS4nkDiFuhg1eDTaTjA57v85E1dMQG2BmnNfermSCIe-dAXetIw0jXe7xYaseFQY7iI5KjtIfgLjWRArxFGr3vqaQo5UxwjhdAT7rbEiBjR7kwvDk364FXttbfleCWpT-JnF2ru8JIGS-Bq_9V-fQxwkhe0pkfYjvBOGXd6dlUDYZUEmmZtDuQxNPTPPfyL0QnJwonwRQbNIy_QnTwJhcPwZUoYCPGG5nnqFquRdFECvedkzn" alt="LSM Hero">
+            </div>
+            <div class="container hero-content">
+                <div class="badge">
+                    <span style="width: 8px; height: 8px; background: #60a5fa; border-radius: 50%; display: inline-block;"></span>
+                    Contenido informativo actualizado
+                </div>
+                <h1>LSM Aprendizaje <br><span>Interactivo</span></h1>
+                <p style="color: white">Descubre el lenguaje que une corazones y rompe barreras de comunicación en México. Una plataforma diseñada para la inclusión total.</p>
+                <button onclick="showPage('mas-informacion')" class="btn">
+                    <span class="material-symbols-outlined">info</span>
+                    Más información
+                </button>
+            </div>
+        </header>
+
+        <section class="INFO">
+            <div class="container">
+                <div class="section-header">
+                    <span style="color: var(--primary); font-weight: bold; text-transform: uppercase; font-size: 0.75rem;">Descubrimiento</span>
+                    <h2>Información Extra</h2>
+                    <div class="accent-line"></div>
+                </div>
+                <div class="grid-3">
+                    <!-- Testimonios Card -->
+                    <div class="card" onclick="openModal('modal-testimonios')">
+                        <div class="card-img-wrapper">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4_00LcAUf-bpdYcbL6UriSE_-x7qjS6mt9qFsqvurPZkMuKC4eaF4jD8T8GwOSRbyyKH_SLwbuIbzOpnkr5lxw_yEGINH3EyyBRF74E0PcZQyq0HmlJb43eWDrxt7FywWiS9nFbXCnnrY9Nc_4yHLxCmXkoyXEvhLHeXdfgaFSo5nU-jhj9WS3eZk2jsgdk-ApGZ-GdepZOagczFteaIp4FjNt7gNbsGxgPmA-CPZRp21emtLX4ddeXooon0rLsmtrwf9Lj9siAOW" alt="Testimonios">
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <span class="material-symbols-outlined" style="font-size: 2.5rem;">forum</span>
+                                <h3>Testimonios Reales</h3>
+                                <p style="color: white;">Conoce las inspiradoras historias de vida y superación de los miembros de nuestra comunidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Centros Card -->
+                    <div class="card" onclick="openModal('modal-centros')">
+                        <div class="card-img-wrapper">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuClx95w9hKIpB3m8m5K5C6eg0q0Slma8935ELH54XJ3xxI7Qa9Sdl8A4Kx0hIkp518bfsZdm7B_PMj7DKQR574xiLbLt5sX23KCnUK8p1NzYA_MUKQgP4Wgir9EIMrH7eC3-IJg3emQxdaUuY2w0iV3anJ6DnFj2J-oEe8QbVIHk4qWaCsmklpQ1YEJvHb7mApU_iSG_Cpz1tflqwAs9acfa9Xxd-gkSl0sQambhzES_Oc4jDL4o-6QjXELV9fO6sXo_RaEuJ-mL-lr" alt="Centros">
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <span class="material-symbols-outlined" style="font-size: 2.5rem;">distance</span>
+                                <h3>Centros de Apoyo</h3>
+                                <p style="color: white;">Encuentra el centro de asistencia y asociaciones más cercanos a tu ubicación.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cultura Card -->
+                    <div class="card" onclick="openModal('modal-cultura')">
+                        <div class="card-img-wrapper">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOcpN8oXHV1ZLDCSFB5vnq20UzyRaz2ukCIog6C5JJ88KHk4QVGIIMIVgGZNLEu65arfUTHVXkmTV6v4nbRkFmDstMXkj5ihZkMBzV76f-gJ0iORP-Cp1BGZqxO1E8v4ctuFl0pf9BP1jxtcbDOAEVnaXj4TUvRDIIOYzXtNfZZt6tQqBt-jS8_7cebXGa19eCAytXdjBwRgbfquK3ps4cXzRV0N_jtmpi6V71riMg1ii73tdEABvIKebBa_YMbd2ZEBVbB543oNNy" alt="Cultura">
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <span class="material-symbols-outlined" style="font-size: 2.5rem;">history_edu</span>
+                                <h3>Cultura Sorda</h3>
+                                <p style="color: white;">Sumérgete en la rica historia y el patrimonio cultural que define a la comunidad sorda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2 style="color: var(--primary);">Impacto y Soluciones Reales</h2>
+                    <p >Construimos puentes. Nuestra iniciativa está centrada en la concienciación constante y el respeto a la cultura sorda.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <div class="icon-box"><span class="material-symbols-outlined">diversity_3</span></div>
+                        <h3>Inclusión Real</h3>
+                       <p>Fomentamos espacios donde todos puedan comunicarse sin barreras.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box"><span class="material-symbols-outlined">visibility</span></div>
+                        <h3>Conciencia Visual</h3>
+                       <p>Contenido diseñado para sensibilizar sobre la importancia de la comunicación visual.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box"><span class="material-symbols-outlined">public</span></div>
+                        <h3>Red de Apoyo</h3>
+                       <p>Únete a una red global de personas interesadas en la inclusión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Problematica Page -->
+
+    <!-- Dificultades Page -->
+    
+    <!-- Mas Informacion Page -->
+    
+
+    <!-- Modals -->
+    <div id="modal-testimonios" class="modal-backdrop" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-testimonios')"><span class="material-symbols-outlined">close</span></button>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd8TPNR1y7vIA6lTrN7xyFrnfuwyRVS4nkDiFuhg1eDTaTjA57v85E1dMQG2BmnNfermSCIe-dAXetIw0jXe7xYaseFQY7iI5KjtIfgLjWRArxFGr3vqaQo5UxwjhdAT7rbEiBjR7kwvDk364FXttbfleCWpT-JnF2ru8JIGS-Bq_9V-fQxwkhe0pkfYjvBOGXd6dlUDYZUEmmZtDuQxNPTPPfyL0QnJwonwRQbNIy_QnTwJhcPwZUoYCPGG5nnqFquRdFECvedkzn" alt="User">
+                </div>
+                <div class="modal-text">
+                    <span style="color: var(--brand-blue); font-weight: bold; font-size: 0.75rem;">Historia de Vida</span>
+                    <h2 style="margin-bottom: 1.5rem;">Testimonios Reales</h2>
+                    <p style="font-style: italic; font-size: 1.25rem; margin-bottom: 2rem;">"Aprender LSM no solo me dio una voz, me dio una identidad. Antes, el mundo parecía estar detrás de un cristal. Ahora, puedo expresar mis sueños."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 3rem; height: 3rem; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><span class="material-symbols-outlined">person</span></div>
+                        <div>
+                            <strong>María González</strong><br>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">Activista, CDMX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-centros" class="modal-backdrop" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content" style="max-width: 1000px;">
+            <button class="modal-close" onclick="closeModal('modal-centros')"><span class="material-symbols-outlined">close</span></button>
+            <div class="modal-body">
+                <div class="modal-img" style="width: 50%;">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuClx95w9hKIpB3m8m5K5C6eg0q0Slma8935ELH54XJ3xxI7Qa9Sdl8A4Kx0hIkp518bfsZdm7B_PMj7DKQR574xiLbLt5sX23KCnUK8p1NzYA_MUKQgP4Wgir9EIMrH7eC3-IJg3emQxdaUuY2w0iV3anJ6DnFj2J-oEe8QbVIHk4qWaCsmklpQ1YEJvHb7mApU_iSG_Cpz1tflqwAs9acfa9Xxd-gkSl0sQambhzES_Oc4jDL4o-6QjXELV9fO6sXo_RaEuJ-mL-lr" alt="Mapa">
+                </div>
+                <div class="modal-text" style="width: 50%;">
+                    <h2>Centros de Apoyo</h2>
+                    <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="padding: 1rem; border: 1px solid var(--slate-100); border-radius: 0.5rem;">
+                            <strong>Asociación de Sordos CDMX</strong><br>
+                            <span style="font-size: 0.875rem;">Calle Inclusión 123, CDMX</span>
+                        </div>
+                        <div style="padding: 1rem; border: 1px solid var(--slate-100); border-radius: 0.5rem;">
+                            <strong>Centro Intérpretes Monterrey</strong><br>
+                            <span style="font-size: 0.875rem;">Av. Constitución 456, Monterrey</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-cultura" class="modal-backdrop" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-cultura')"><span class="material-symbols-outlined">close</span></button>
+            <div class="modal-body" style="flex-direction: column; padding: 3rem;">
+                <h2>Cultura y Tradiciones</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                    <div>
+                        <h3 style="display: flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">visibility</span> Identidad Visual</h3>
+                        <p>Para la comunidad sorda, el mundo se percibe a través de la vista. La "Identidad Sorda" se define por la pertenencia a un grupo social con una lengua propia.</p>
+                    </div>
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOcpN8oXHV1ZLDCSFB5vnq20UzyRaz2ukCIog6C5JJ88KHk4QVGIIMIVgGZNLEu65arfUTHVXkmTV6v4nbRkFmDstMXkj5ihZkMBzV76f-gJ0iORP-Cp1BGZqxO1E8v4ctuFl0pf9BP1jxtcbDOAEVnaXj4TUvRDIIOYzXtNfZZt6tQqBt-jS8_7cebXGa19eCAytXdjBwRgbfquK3ps4cXzRV0N_jtmpi6V71riMg1ii73tdEABvIKebBa_YMbd2ZEBVbB543oNNy" style="width: 100%; border-radius: 1rem;" alt="Cultura">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 1.5rem;">
+                        <span class="material-symbols-outlined">sign_language</span>
+                        <span>LSM Aprendizaje</span>
+                    </a>
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">Dedicados a cerrar la brecha de comunicación en México a través de la educación digital accesible y la difusión cultural.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Plataforma</h4>
+                    <ul>
+                        <li><a href="#" onclick="showPage('mas-informacion')">Más información</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Compañía</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://www.tiktok.com/@voz_en_senas?_r=1&_t=ZS-93rlOoMMby9" style="width: 2.5rem; height: 2.5rem; background: rgba(236,91,19,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                           <i class="bi bi-facebook"></i>
+                           <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/voz_en_senas_lms?igsh=MTh4ZXZsM3llcXYwZQ%3D%3D&utm_source=qr" style="width: 2.5rem; height: 2.5rem; background: rgba(236,91,19,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                           <i class="bi bi-facebook"></i>
+                           <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top: 1px solid var(--slate-100); padding-top: 2rem; display: flex; justify-content: space-between; font-size: 0.75rem; color: #94a3b8;">
+                <p>© 2024 LSM Aprendizaje Interactivo. Todos los derechos reservados.</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="#">Términos</a>
+                    <a href="#">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript.js"></script>
+
+    
+    
+</body>
+</html>
