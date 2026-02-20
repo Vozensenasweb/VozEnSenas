@@ -54,8 +54,3 @@
             showPage('home');
         };
 
-        // Toggle Mobile Menu
-function toggleMenu() {
-    const nav = document.getElementById('navLinks');
-    nav.classList.toggle('active');
-}
