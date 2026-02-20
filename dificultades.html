@@ -12,7 +12,8 @@
 
 </head>
 <body>
-        <nav>
+           <!-- Navigation -->
+    <nav>
         <div class="container nav-content">
             <a href="#" onclick="showPage('home')" class="logo">
                  <div style="border-radius: 30%; display: flex; align-items: center; justify-content: center; color: var(--primary); width: 2.5rem; height: 2.5rem; background: rgba(255, 255, 255, 0.1);">
@@ -21,12 +22,12 @@
             </div> 
                 <span>LSM Aprendizaje</span>
             </a>
-            <div class="nav-links">
-                <a href="index.html" id="link-home">Inicio</a>
-                <a href="problematica.html" id="link-problematica">Problemática</a>
-                <a href="dificultades.html" id="link-dificultades">Dificultades</a>
-                <a href="mas info.html" id="link-mas-informacion">Más Información</a>
-            </div>
+               <div class="nav-links" id="navLinks">
+            <a href="index.html" id="link-home">Inicio</a>
+            <a href="problematica.html" id="link-problematica">Problemática</a>
+            <a href="dificultades.html" id="link-dificultades">Dificultades</a>
+            <a href="mas info.html" id="link-mas-informacion">Más Información</a>
+        </div>
             <div class="md-hidden" style="display: none;">
                 <span class="material-symbols-outlined">menu</span>
             </div>
@@ -34,6 +35,15 @@
             <button onclick="toggleDarkMode()" style="background: none; border: none; cursor: pointer;">
                 <span class="material-symbols-outlined" id="dark-mode-icon">dark_mode</span>
             </button>
+
+              <!-- HAMBURGUESA -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+
+
+
+
         </div>
     </nav>
 

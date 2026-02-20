@@ -32,12 +32,12 @@
             </div> 
                 <span>LSM Aprendizaje</span>
             </a>
-            <div class="nav-links">
-                <a href="index.html" id="link-home">Inicio</a>
-                <a href="problematica.html" id="link-problematica">Problemática</a>
-                <a href="dificultades.html" id="link-dificultades">Dificultades</a>
-                <a href="mas info.html" id="link-mas-informacion">Más Información</a>
-            </div>
+               <div class="nav-links" id="navLinks">
+            <a href="index.html" id="link-home">Inicio</a>
+            <a href="problematica.html" id="link-problematica">Problemática</a>
+            <a href="dificultades.html" id="link-dificultades">Dificultades</a>
+            <a href="mas info.html" id="link-mas-informacion">Más Información</a>
+        </div>
             <div class="md-hidden" style="display: none;">
                 <span class="material-symbols-outlined">menu</span>
             </div>
@@ -45,8 +45,18 @@
             <button onclick="toggleDarkMode()" style="background: none; border: none; cursor: pointer;">
                 <span class="material-symbols-outlined" id="dark-mode-icon">dark_mode</span>
             </button>
+
+              <!-- HAMBURGUESA -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+
+
+
+
         </div>
     </nav>
+    
 
     <!-- Home Page -->
     <div id="home" class="page active">
