@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>LSM Aprendizaje Interactivo 
+    <title>Voz en Señas 
     </title>
     
     <!-- Google Fonts & Icons -->
@@ -14,7 +14,7 @@
 
     <meta name="description" content="Un sitio web donde se presenta información sobre el lenguaje de señas mexicano (LSM) y su importancia en la comunicación inclusiva.">
 
-    <meta property="og:title" content="LSM Aprendizaje Interactivo"/>
+    <meta property="og:title" content="Voz en Señas"/>
     <meta property="og:description" content="Un sitio web donde se presenta información sobre el lenguaje de señas mexicano (LSM) y su importancia en la comunicación inclusiva."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://lsmaprendizajeinteractivo.com"/>
@@ -23,14 +23,15 @@
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <div class="container nav-content">
-            <a href="#" onclick="showPage('home')" class="logo">
+   <nav>
+    <div class="container nav-content">
+
+                    <a href="index.html" class="logo">
                  <div style="border-radius: 30%; display: flex; align-items: center; justify-content: center; color: var(--primary); width: 2.5rem; height: 2.5rem; background: rgba(255, 255, 255, 0.1);">
             <img style="width: 2.5rem; height: 2.5rem; background: rgba(236,91,19,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);"src="IMG.jpg/WhatsApp Image 2026-02-03 at 12.14.43 PM.jpeg" alt="">
 
             </div> 
-                <span>LSM Aprendizaje</span>
+                <span>Voz en Señas</span>
             </a>
             <div class="nav-links">
                 <a href="index.html" id="link-home">Inicio</a>
@@ -38,29 +39,34 @@
                 <a href="dificultades.html" id="link-dificultades">Dificultades</a>
                 <a href="mas info.html" id="link-mas-informacion">Más Información</a>
             </div>
-            <div class="md-hidden" style="display: none;">
-                <span class="material-symbols-outlined">menu</span>
-            </div>
-            <!-- Simple Dark Mode Toggle -->
-            <button onclick="toggleDarkMode()" style="background: none; border: none; cursor: pointer;">
-                <span class="material-symbols-outlined" id="dark-mode-icon">dark_mode</span>
-            </button>
+        <!-- 👇 AQUÍ VA -->
+    
+        <button onclick="toggleDarkMode()" style="background:none;border:none;cursor:pointer;">
+            <span class="material-symbols-outlined" id="dark-mode-icon">dark_mode</span>
+        </button>
+
+          <div class="hamburger">
+            <span class="material-symbols-outlined">menu</span>
         </div>
-    </nav>
+
+
+    </div>
+</nav>
+
 
     <!-- Home Page -->
     <div id="home" class="page active">
         <header class="hero">
             <div class="hero-bg">
                 <div class="hero-overlay"></div>
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd8TPNR1y7vIA6lTrN7xyFrnfuwyRVS4nkDiFuhg1eDTaTjA57v85E1dMQG2BmnNfermSCIe-dAXetIw0jXe7xYaseFQY7iI5KjtIfgLjWRArxFGr3vqaQo5UxwjhdAT7rbEiBjR7kwvDk364FXttbfleCWpT-JnF2ru8JIGS-Bq_9V-fQxwkhe0pkfYjvBOGXd6dlUDYZUEmmZtDuQxNPTPPfyL0QnJwonwRQbNIy_QnTwJhcPwZUoYCPGG5nnqFquRdFECvedkzn" alt="LSM Hero">
+                <img class="corazon" src="IMG.jpg/Voz.png" alt="LSM Hero">
             </div>
             <div class="container hero-content">
                 <div class="badge">
                     <span style="width: 8px; height: 8px; background: #60a5fa; border-radius: 50%; display: inline-block;"></span>
                     Contenido informativo actualizado
                 </div>
-                <h1>LSM Aprendizaje <br><span>Interactivo</span></h1>
+                <h1>Voz en Señas</h1>
                 <p style="color: white">Descubre el lenguaje que une corazones y rompe barreras de comunicación en México. Una plataforma diseñada para la inclusión total.</p>
                 <button onclick="showPage('mas-informacion')" class="btn">
                     <span class="material-symbols-outlined">info</span>
@@ -228,31 +234,18 @@
                          <img style="width: 2.5rem; height: 2.5rem; background: rgba(236,91,19,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);"src="IMG.jpg/WhatsApp Image 2026-02-03 at 12.14.43 PM.jpeg" alt="">
 
                     </div> 
-                        <span>LSM Aprendizaje</span>
+                        <span>Voz en Señas</span>
                     </a>
                     <p style="color: var(--text-muted); font-size: 0.875rem;">Dedicados a cerrar la brecha de comunicación en México a través de la educación digital accesible y la difusión cultural.</p>
                 </div>
-                <div class="footer-col">
-                    <h4>Plataforma</h4>
-                    <ul>
-                        <li><a href="#" onclick="showPage('mas-informacion')">Más información</a></li>
-                        <li><a href="#">Comunidad</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Compañía</h4>
-                    <ul>
-                        <li><a href="#">Sobre Nosotros</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </div>
+
                 <div class="footer-col">
                     <h4>Síguenos</h4>
                     <div style="display: flex; gap: 1rem;">
                         <a href="https://www.tiktok.com/@voz_en_senas?_r=1&_t=ZS-93rlOoMMby9" style="width: 2.5rem; height: 2.5rem; background: rgba(236,91,19,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
                            <i class="fa-brands fa-tiktok"></i>
                         </a>
-                        <a href="https://www.instagram.com/voz_en_senas_lms?igsh=MTh4ZXZsM3llcXYwZQ%3D%3D&utm_source=qr" style="width: 2.5rem; height: 2.5rem; background: rgba(236,91,19,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                        <a href="https://www.instagram.com/voz_en_senas_lsm?igsh=MWpkbGxuZjN4cTNseg==" style="width: 2.5rem; height: 2.5rem; background: rgba(236,91,19,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
                            <i class="fa-brands fa-instagram"></i>
                         </a>
                          <a href="https://www.facebook.com/people/Voz-en-Se%C3%B1as-LMS/61587245290683/?locale=es_LAdius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);" style="width: 2.5rem; height: 2.5rem; background: rgba(236,91,19,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
@@ -263,7 +256,7 @@
                 </div>
             </div>
             <div style="border-top: 1px solid var(--slate-100); padding-top: 2rem; display: flex; justify-content: space-between; font-size: 0.75rem; color: #94a3b8;">
-                <p>© 2024 LSM Aprendizaje Interactivo. Todos los derechos reservados.</p>
+                <p>© 2024 Voz en Señas. Todos los derechos reservados.</p>
                 <div style="display: flex; gap: 2rem;">
                     <a href="#">Términos</a>
                     <a href="#">Privacidad</a>

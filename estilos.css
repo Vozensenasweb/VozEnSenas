@@ -366,7 +366,7 @@
 
         @media (max-width: 768px) {
             .footer-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
+           
             .hero h1 { font-size: 2.5rem; }
         }
 
@@ -415,7 +415,6 @@
             width: 100%;
             max-width: 900px;
             border-radius: 2rem;
-            overflow: hidden;
             position: relative;
             display: flex;
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
@@ -541,4 +540,53 @@
             background-position: center;
         }
 
-        
+        .corazon {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            width: 50px;
+            height: 50px;
+            z-index: -1;
+
+            
+        }
+        /* =========================
+   NAVBAR RESPONSIVE LIMPIO
+========================= */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        background: var(--background-light);
+        display: flex;
+        flex-direction: column;
+        padding-top: 6rem;
+        padding-left: 2rem;
+        gap: 2rem;
+        transition: right 0.3s ease-in-out;
+        z-index: 1500;
+    }
+
+    html.dark .nav-links {
+        background: var(--background-dark);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+}
